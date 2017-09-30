@@ -22,25 +22,32 @@
                     <div class="form-group">
                         <label for="size">Select your Pizza size:</label>
                         <select class="form-control" id="size">
-                            <option value = "Small">Small</option>
-                            <option value = "Medium">Medium</option>
-                            <option value = "Large">Large</option>
+                            <option value="" selected disabled>Select</option>
+                            <option value = "small">Small 10$</option>
+                            <option value = "medium">Medium 14$</option>
+                            <option value = "large">Large 20$</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="size">Select your Topping/Toppings:</label><br>
-                        <input type="checkbox" value="Cheese">Cheese<br>
-                        <input type="checkbox"  value="Peperoni">Peperoni<br>
-                        <input type="checkbox"  value="Artichoke">Artichoke<br>
-                        <input type="checkbox" value="Anchovy">Anchovy<br>
-                        <input type="checkbox" value="Paneer">Paneer<br>
-                        <input type="checkbox" value="Onions and tomatoes">Onions and tomatoes<br>
-                        <input type="checkbox" value="Jalapenos and peppers">Jalapenos and peppers<br>
+                        <input type="checkbox" value="cheese">Cheese 1$<br>
+                        <input type="checkbox"  value="peperoni">Peperoni 2$<br>
+                        <input type="checkbox"  value="artichoke">Artichoke 1$<br>
+                        <input type="checkbox" value="anchovy">Anchovy 2$<br>
+                        <input type="checkbox" value="paneer">Paneer 1$<br>
+                        <input type="checkbox" value="onions and tomatoes">Onions and tomatoes 1$<br>
+                        <input type="checkbox" value="jalapenos and peppers">Jalapenos and peppers 1$<br>
                     </div>
                     <button type="submit">Calculate Price</button>
                     <input id= "refresh" type=button value="Refresh" onClick="history.go()">
                 </form>
             </div>
+            <div class="result">
+                <h3>Thanks for your choice</h3>
+                <h4>Cost is <span id="cost"></span>$</h4>
+                <h4>For <span id="size-chosen"></span>Size.With <span id="topping">.</span></h4>
+            </div>
+
 
         </div>
 

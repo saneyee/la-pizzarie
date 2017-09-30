@@ -8,5 +8,13 @@ body {
     background-size: cover;
     font-size: 17px;
     color: white;
-
+}
+button {
+    color: black;
+}
+#refresh {
+    color: black;
+}
+.result {
+    display: none;
 }
