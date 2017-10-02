@@ -1,31 +1,31 @@
 //business logic//
-var size = {
+var sizePrices = {
     small:10,
     medium:14,
     large:20
-};
-var topping = {
+}
+var toppingPrices = {
     cheese:1,
     peperoni:2,
     artichoke:1,
     anchovy:2,
     paneer:1,
-    onions and tomatoes:1,
-    jalapenos and peppers:1
-};
-function Pizza(size,topping) {
+    onions:1,
+    jalapenos:1
+}
+var Pizza = function(size, toppings){
     this.size = size;
-    this.topping = topping;
+    this.toppings = toppings;
 }
+
 Pizza.prototype.cost = function() {
-    var price = this.size;
-    var fprice = price+work;
+    var price = 0;
+    price += sizePrices[this.size];
+    for(var i = 0; i < this.toppings.length; i++){
+        price += toppingPrices[this.toppings[i]];
+    }
+    return price;
 }
-
-
-
-
-
 
 //user logic//
 $(function() {
@@ -33,17 +33,18 @@ $(function() {
         event.preventDefault();
         var inputtedName = $("input#name").val();
         var inputtedSize = $("select#size").val();
-        var userToppingChoice = $("input[type=checkbox]:checked").each(function() {
-            var work = $(this).val();
-            cost();
+        var toppings = [];
+        $("input[type=checkbox]:checked").each(function(index) {
+            toppings[index] = $(this).val();
+        });
 
-    });
-
-
-        var newPizza = new Pizza(inputtedSize, inputtedTopping);
-        var costofPizza = newPizza.cost();
-
-
+        var myPizza = new Pizza(inputtedSize,toppings);
+        var costofPizza = myPizza.cost();
+        $("#name").text(inputtedName);
+        $("#topping").text(myPizza.toppings);
+        $("#size-chosen").text(myPizza.size);
+        $("#cost").text(costofPizza);
+        $(".result").show();
 
     });
 

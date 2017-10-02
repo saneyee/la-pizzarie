@@ -35,15 +35,15 @@
                         <input type="checkbox"  value="artichoke">Artichoke 1$<br>
                         <input type="checkbox" value="anchovy">Anchovy 2$<br>
                         <input type="checkbox" value="paneer">Paneer 1$<br>
-                        <input type="checkbox" value="onions and tomatoes">Onions and tomatoes 1$<br>
-                        <input type="checkbox" value="jalapenos and peppers">Jalapenos and peppers 1$<br>
+                        <input type="checkbox" value="onions">Onions and tomatoes 1$<br>
+                        <input type="checkbox" value="jalapenos">Jalapenos and peppers 1$<br>
                     </div>
                     <button type="submit">Calculate Price</button>
                     <input id= "refresh" type=button value="Refresh" onClick="history.go()">
                 </form>
             </div>
             <div class="result">
-                <h3>Thanks for your choice</h3>
+                <h3>Thanks <span id="name"></span> for your choice</h3>
                 <h4>Cost is <span id="cost"></span>$</h4>
                 <h4>For <span id="size-chosen"></span>Size.With <span id="topping">.</span></h4>
             </div>
