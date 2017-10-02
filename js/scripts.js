@@ -40,7 +40,7 @@ $(function() {
 
         var myPizza = new Pizza(inputtedSize,toppings);
         var costofPizza = myPizza.cost();
-        $("#name").text(inputtedName);
+        $("#nameoutput").text(inputtedName);
         $("#topping").text(myPizza.toppings);
         $("#size-chosen").text(myPizza.size);
         $("#cost").text(costofPizza);
